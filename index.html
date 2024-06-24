@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 1.2rem;
+        }
+        .project{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .calculator{
+            background-color: black;
+            display: grid;
+            height: 90vh;
+            width: 400px;
+            gap: 7px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1.5fr repeat(7, 1fr);
+            padding-left: 8px;
+            padding-bottom: 11px;
+            padding-top: 8px;
+            padding-right: 8px;
+            border-radius: 3%;
+            box-shadow: 10px 17px 9px rgb(75, 75, 75);
+
+        }
+        button{
+            background-color: transparent;
+        }
+        .key{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(170,170,172);
+            background: linear-gradient(90deg, rgb(83, 83, 84) 0%, rgb(47, 48, 48) 35%, rgb(48, 48, 48) 100%);
+            border-radius: 10%;
+            color: rgb(235, 110, 181);
+        }
+        #screen{
+            
+            grid-column: span 5;
+            background: rgb(170,170,172);
+            background: linear-gradient(90deg, rgb(206, 204, 207) 0%, rgb(197, 196, 197) 35%, rgb(203, 200, 202) 100%);
+            border: 5px solid black;
+            color: black;
+            display:flex;
+            justify-content: right;
+            text-align: right;
+            padding-right: 10px;
+            font-size: 2rem;
+            overflow-x: auto;
+            white-space: nowrap;
+            
+        }
+        
+        .equal{
+            grid-row: span 2;
+            background: rgb(170,170,172);
+            background: linear-gradient(90deg, rgb(151, 71, 197) 0%, rgb(189, 69, 233) 35%, rgb(251, 61, 222) 100%);
+            color: #ffffff;
+            font-size: 2rem;
+            
+        }
+        .digit{
+            color: #ffffff;
+        }
+        .op{
+            background: rgb(170,170,172);
+            background: linear-gradient(90deg, rgb(168, 78, 236) 0%, rgb(92, 7, 134) 35%, rgb(65, 1, 95) 100%);
+            color: #ffffff;
+        }
+        .txt{
+            color: #a655e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="project">
+    
+    <div class="calculator">
+        <input type = "text" name = "screen" id = "screen" class = "key display" >
+        <!-- <div class="key display">CASIO</div> -->
+        <button class="key">2nd</button>
+        <button class="key">deg</button>
+        <button class="key">sin</button>
+        <button class="key">cos</button>
+        <button class="key">tan</button>
+        <button class="key" id = "pow"><p> X <sup>y</sup></p></button>
+        <button class="key">lg</button>
+        <button class="key">in</button>
+        <button class="key">(</button>
+        <button class="key">)</button>
+        <button class="key">√X</button>
+        <button class="key txt">AC</button>
+        <button class="key op">%</button>
+        <button class="key op">÷</button>
+        <button class="key op">x</button>
+        <button class="key">X !</button>
+        <button class="key digit">7</button>
+        <button class="key digit">8</button>
+        <button class="key digit">9</button>
+        <button class="key op">-</button>
+        <button class="key">½</button>
+        <button class="key digit">4</button>
+        <button class="key digit">5</button>
+        <button class="key digit">6</button>
+        <button class="key op">+</button>
+        <button class="key">π</button>
+        <button class="key digit">1</button>
+        <button class="key digit">2</button>
+        <button class="key digit">3</button>
+        <button class="key equal">=</button>
+        <button class="key">e</button>
+        <button class="key txt">⌫</button>
+        <button class="key digit">0</button>
+        <button class="key digit">.</button>
+
+    </div>
+    </div>
+    <script src = "index.js"></script>
+</body>
+</html>
