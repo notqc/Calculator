@@ -72,11 +72,15 @@ for (item of buttons){
                             else if (buttonText == 'cos') {
                                     screenValue += 'Math.cos(';
                                     screen.value = screenValue;
-                                }
-                                else if (buttonText == '=') {
-                                        screen.value = eval(screenValue);
-                                        screenValue = screen.value
-                                    }
+                                
+                                } else if (buttonText === '=') {
+                                                    try {
+                                                        screenValue = eval(screenValue);
+                                                    } catch {
+                                                        screenValue = 'Error';
+                                                    }
+                                                    screen.value = screenValue;}
+                                    
         else {
             screenValue += buttonText;
             screen.value = screenValue;
